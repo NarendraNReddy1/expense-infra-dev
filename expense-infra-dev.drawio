@@ -1,0 +1,13 @@
+<mxfile host="Electron" modified="2024-09-13T23:38:03.413Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="BPG_ii7F1C_UXeGuWlFX" version="24.6.1" type="device">
+  <diagram name="Page-1" id="2HKIiYUWyNZ5vOsDM-7z">
+    <mxGraphModel dx="1034" dy="519" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="O8SLl8QT769zpnyTbLpH-1" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=https://raw.githubusercontent.com/daws-78s/expense-infra-dev/fa4b071b60415b94d81b05a6255f85e04201eb08/expense-infra-dev.drawio.svg;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="662" height="820" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
