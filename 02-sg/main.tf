@@ -67,6 +67,18 @@ module "vpn" {
 }
 
 
+module "web_alb" {
+  source = "git::https://github.com/NarendraNReddy1/terraform-aws-secruitygroup.git"
+  project_name = var.project_name
+  environment = var.environment
+  sg_description = "SG for web_alb Instances"
+  vpc_id=data.aws_ssm_parameter.vpc_id.value
+  sg_name="web_alb"
+  common_tags = var.common_tags
+
+}
+
+
 #### VPN RULES
 
 
@@ -150,6 +162,8 @@ resource "aws_security_group_rule" "app_alb_vpn" {
 
 
 
+
+
 ##### FRONTEND
 
 resource "aws_security_group_rule" "frontend_public" {
@@ -180,5 +194,29 @@ resource "aws_security_group_rule" "bastion_public" {
   cidr_blocks = ["0.0.0.0/0"]
   security_group_id = module.bastion.sg_id
 }
+
+
+
+##### WEB_ALB
+
+resource "aws_security_group_rule" "web_alb_public" {
+  type              = "ingress"
+  from_port         = 80
+  to_port           = 80
+  protocol          = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+  security_group_id = module.web_alb.sg_id
+}
+
+
+resource "aws_security_group_rule" "web_alb_public_https" {
+  type              = "ingress"
+  from_port         = 443
+  to_port           = 443
+  protocol          = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
+  security_group_id = module.web_alb.sg_id
+}
+
 
 
